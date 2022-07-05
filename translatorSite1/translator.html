@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="styleTranslator.css">
 
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+
+
+
 </head>
 
 
@@ -80,7 +84,10 @@
          </svg>
      </div>
 
-     <h1 class="text-blue-100 text-4xl">Hello!</h1>
+   
+  
+
+    
 
 
    </main>
@@ -99,5 +106,40 @@
 
    </div>
 
+   <div class="bg-red-600 h-72">
+
+      <div class="box green h-24 w-24 bg-blue-200"></div>
+   
+  <div class="nav">
+    <button id="play">play()</button>
+    <button id="pause">pause()</button>
+    <button id="resume">resume()</button>
+    <button id="reverse">reverse()</button>
+    <button id="restart">restart()</button>
+  </div>
+
+
+   </div>
+
 </body>
+
+<script>
+   var tween = gsap.to(".green", {
+  duration: 4, 
+  x: 750, 
+  rotation: 360, 
+  ease: "none", 
+  paused: true
+});
+
+// click handlers for controlling the tween instance...
+document.querySelector("#play").onclick = () => tween.play();
+document.querySelector("#pause").onclick = () => tween.pause();
+document.querySelector("#resume").onclick = () => tween.resume();
+document.querySelector("#reverse").onclick = () => tween.reverse();
+document.querySelector("#restart").onclick = () => tween.restart();
+</script>
+
+
+
 </html>
