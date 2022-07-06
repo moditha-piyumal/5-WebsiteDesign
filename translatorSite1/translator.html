@@ -76,13 +76,33 @@
 
    </div>
 
-   <main class="h-72 bg-zinc-500 relative pt-[100px]">
+   <main class="h-[700px] bg-zinc-500 relative pt-[100px] z-01">
 
       <div class="custom-shape-divider-top-1656566738">
          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
              <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
          </svg>
      </div>
+
+      <div class="grid grid-cols-4 border-solid border-2 w-full text-2xl
+       text-white bg-zinc-900 h-max-content z-03">
+
+         <button id="play" class="h-12 mx-2 border-solid border-2 rounded-lg my-2 hover:bg-zinc-500 duration-500 hover:text-zinc-900">Play</button>
+
+         <button id="pause" class="h-12 mx-2 border-solid border-2 rounded-lg my-2 hover:bg-zinc-500 duration-500 hover:text-zinc-900">Pause</button>
+
+         <button id="resume" class="h-12 mx-2 border-solid border-2 rounded-lg my-2 hover:bg-zinc-500 duration-500 hover:text-zinc-900">Resume</button>
+
+         <button id="reverse" class="h-12 mx-2 border-solid border-2 rounded-lg my-2 hover:bg-zinc-500 duration-500 hover:text-zinc-900">Reverse</button>
+
+      </div>
+
+      <div class="movingContainer border-solid border-2 border-zinc-900 h-32 my-2 w-full absolute top-[800px] z-02 bg-red-600">
+
+         <!-- This should contain sub divs that are in their separate containers. That way, when the entire big container moves up, all of them will appear to be moving up, separately. -->
+
+
+      </div>
 
    
   
@@ -107,16 +127,13 @@
    </div>
 
    <div class="bg-red-600 h-72">
+      
 
-      <div class="box green h-24 w-24 bg-blue-200"></div>
+      <div class="box green h-24 w-24 bg-blue-200 absolute bottom--100 left-72">
+
+      </div>
    
-  <div class="nav">
-    <button id="play">play()</button>
-    <button id="pause">pause()</button>
-    <button id="resume">resume()</button>
-    <button id="reverse">reverse()</button>
-    <button id="restart">restart()</button>
-  </div>
+     
 
 
    </div>
@@ -124,10 +141,10 @@
 </body>
 
 <script>
-   var tween = gsap.to(".green", {
-  duration: 4, 
-  x: 750, 
-  rotation: 360, 
+   var tween = gsap.to(".movingContainer", {
+  duration: 10,  
+  y: -1000,
+  rotation: 0, 
   ease: "none", 
   paused: true
 });
