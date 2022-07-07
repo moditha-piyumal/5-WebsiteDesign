@@ -97,7 +97,24 @@
 
       </div>
 
-      <div class="movingContainer border-solid border-2 border-zinc-900 h-32 my-2 w-full absolute top-[800px] z-02 bg-red-600">
+      <div class="movingContainer border-solid border-2 border-zinc-900 h-max-content my-2 w-full absolute top-[250px] z-02 grid grid-rows-4 gap-8 p-6 text-xl text-violet-200">
+
+         <div class="border-2 border-solid border-blue-300 h-96 text-red-600">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, animi expedita? Dignissimos nobis laudantium saepe. Asperiores suscipit quis doloremque obcaecati?
+            
+         </div>
+         <div class="border-2 border-solid border-blue-300 h-96">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, animi expedita? Dignissimos nobis laudantium saepe. Asperiores suscipit quis doloremque obcaecati?
+
+         </div>
+         <div class="border-2 border-solid border-blue-300 h-96">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, animi expedita? Dignissimos nobis laudantium saepe. Asperiores suscipit quis doloremque obcaecati?
+
+         </div>
+         <div class="border-2 border-solid border-blue-300 h-96">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, animi expedita? Dignissimos nobis laudantium saepe. Asperiores suscipit quis doloremque obcaecati?
+
+         </div>
 
          <!-- This should contain sub divs that are in their separate containers. That way, when the entire big container moves up, all of them will appear to be moving up, separately. -->
 
@@ -143,7 +160,7 @@
 <script>
    var tween = gsap.to(".movingContainer", {
   duration: 10,  
-  y: -1000,
+  y: -1280,
   rotation: 0, 
   ease: "none", 
   paused: true
