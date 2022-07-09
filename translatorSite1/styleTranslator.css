@@ -60,3 +60,32 @@
 .custom-shape-divider-bottom-1657332221 .shape-fill {
    fill: #18181b;
 }
+
+/* Below are the BLOG css... So, be ready to remove them. */
+
+.blobBigSection
+{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+.blobSection
+{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 1000px;
+   background-color: aqua;
+   /* background-image: url("lion.jpg"); */
+}
+.blobDiv 
+{
+   position: absolute;
+   width: 600px;
+   height: 600px;
+   background-color: blueviolet;
+}
+
+
+/* Above are the BLOB css. */
