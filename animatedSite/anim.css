@@ -47,6 +47,19 @@ body {
 
 }
 
+
+.part3 {
+   background-color: hotpink;
+   position: relative;
+   overflow-x: hidden;
+   overflow-y: hidden;
+   height: 100vh;
+   margin: 0;
+   display: flex;
+   justify-content: center;
+
+}
+
 .block {
    width: 100px;
    height: 100px;
@@ -93,7 +106,8 @@ body {
    animation-name: sq1;
    animation-duration: 7s;
    animation-iteration-count: infinite;
-   animation-timing-function: ease-out;
+   animation-timing-function: ease-in-out;
+   animation-direction: alternate-reverse;
    position: relative;
 }
 
@@ -126,3 +140,31 @@ body {
    50% {width: 100px; height: 100px; border-color: khaki;}
    100% {}
 }
+
+.blobimg {
+   place-self: center;
+   position: relative;
+   border-radius: 64% 36% 51% 49% / 62% 50% 50% 38% ;
+   width: 600px;
+   height: 600px;
+   background-color: aliceblue;
+   border-style: solid;
+   border-width: 10px;
+   animation-name: r2;
+   animation-duration: 9s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   animation-fill-mode: forwards;
+   animation-direction: alternate;
+   background-image: url("lion.jpg");
+   background-size: cover;
+}
+
+@keyframes r2 {
+   0% {}
+   30% {border-radius: 72% 28% 50% 50% / 66% 33% 67% 34% ;}
+   55% {border-radius: 24% 76% 50% 50% / 29% 56% 44% 71% ;}
+   80% {border-radius: 55% 45% 50% 50% / 66% 67% 33% 34% ;}
+   100% {}
+}
+
