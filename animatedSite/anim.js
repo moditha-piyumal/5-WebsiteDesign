@@ -19,3 +19,21 @@ gsap.fromTo("#f12", {x: -150}, {x: 2000,y: 600 ,rotation: 30000, duration: 20, r
 gsap.fromTo("#f13", {x: -750}, {x: 2000,y: -100 ,rotation: 10000, duration: 8, repeat: -1});
 gsap.fromTo("#f14", {x: 2150}, {x: -300,y: 100 ,rotation: 10000, duration: 9, repeat: -1});
 gsap.fromTo("#f15", {x: 3150}, {x: -300,y: 500 ,rotation: 10000, duration: 7, repeat: -1});
+
+
+// This is the loading animation part -->
+
+const loader = document.querySelector('.loadingSq');
+const dummy = document.querySelector('.dummy');
+
+
+function load() {
+   setTimeout(() => {
+      loader.style.opacity = 0;
+
+      setTimeout(() => dummy.style.opacity = 1, 100);
+      
+   }, 8000);
+}
+
+load();

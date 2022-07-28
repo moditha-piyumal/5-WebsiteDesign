@@ -211,6 +211,15 @@ body {
    animation-delay: 4s;
 }
 
+.dummy {
+   position: absolute;
+   place-self: center;
+   color: bisque;
+   text-align: center;
+   opacity: 0;
+   transition: opacity 2s ease-in;
+}
+
 @keyframes r2 {
    0% {}
    30% {border-radius: 72% 28% 50% 50% / 66% 33% 67% 34% ;}
