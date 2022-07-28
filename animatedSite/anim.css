@@ -60,6 +60,19 @@ body {
 
 }
 
+
+.part4 {
+   background-color: blue;
+   position: relative;
+   overflow-x: hidden;
+   overflow-y: hidden;
+   height: 100vh;
+   margin: 0;
+   display: flex;
+   justify-content: center;
+
+}
+
 .block {
    width: 100px;
    height: 100px;
@@ -160,11 +173,78 @@ body {
    background-size: cover;
 }
 
+
+.loadingSq {
+   position: absolute;
+   place-self: center;
+   place-items: center;
+   background-color: blue;
+   height: 120px;
+   width: 120px;
+   animation: rotate 8s linear infinite;
+
+   display: grid;
+   grid-template-columns: 2fr 2fr;
+}
+
+.circle {
+   background-color: red;
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   animation: grow 8s linear infinite;
+   /* margin: -20px; */
+}
+
+.circle:nth-child(2) {
+   background-color: crimson;
+   animation-delay: 6s;
+}
+
+.circle:nth-child(3) {
+   background-color: gold;
+   animation-delay: 2s;
+}
+
+.circle:nth-child(4) {
+   background-color: white;
+   animation-delay: 4s;
+}
+
 @keyframes r2 {
    0% {}
    30% {border-radius: 72% 28% 50% 50% / 66% 33% 67% 34% ;}
    55% {border-radius: 24% 76% 50% 50% / 29% 56% 44% 71% ;}
    80% {border-radius: 55% 45% 50% 50% / 66% 67% 33% 34% ;}
    100% {}
+}
+
+@keyframes rotate {
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+@keyframes grow {
+   20% {
+      transform: scale(0.8);
+   }
+
+   40% {
+      transform: scale(0.3);
+   }
+
+   60% {
+      transform: scale(0.1);
+   }
+
+   80% {
+      transform: scale(0.5);
+   }
+
+   100% {
+      transform: scale(1.0);
+   }
+
 }
 
