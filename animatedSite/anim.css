@@ -73,6 +73,19 @@ body {
 
 }
 
+
+.part5 {
+   background-color: rebeccapurple;
+   position: relative;
+   overflow-x: hidden;
+   overflow-y: hidden;
+   height: 100vh;
+   margin: 0;
+   display: flex;
+   justify-content: center;
+
+}
+
 .block {
    width: 100px;
    height: 100px;
@@ -220,6 +233,82 @@ body {
    transition: opacity 2s ease-in;
 }
 
+.big {
+   position: absolute;
+   /* background-color: crimson; */
+   height: 180px;
+   width: 50px;
+   place-self: center;
+   animation: round 20s linear infinite;
+
+}
+
+
+.bigger {
+   position: absolute;
+   /* background-color: teal; */
+   height: 290px;
+   width: 50px;
+   place-self: center;
+   animation: round2 10s linear infinite;
+
+}
+
+
+.biggest {
+   position: absolute;
+   /* background-color: yellow; */
+   height: 400px;
+   width: 50px;
+   place-self: center;
+   animation: round3 5s linear infinite;
+
+}
+
+.ball1 {
+   position: absolute;
+   top: 0;
+   width: 50px;
+   height: 50px;
+   background-color: sandybrown;
+   border-radius: 50%;
+}
+
+
+.ball2 {
+   position: absolute;
+   top: 0;
+   width: 50px;
+   height: 50px;
+   background-color: yellow;
+   border-radius: 50%;
+}
+
+
+.ball3 {
+   position: absolute;
+   top: 0;
+   width: 50px;
+   height: 50px;
+   background-color: floralwhite;
+   border-radius: 50%;
+}
+
+.xMark {
+   position: absolute;
+   width: 2px;
+   height: 20px;
+   background-color: aqua;
+   place-self: center;
+}
+.yMark {
+   position: absolute;
+   width: 20px;
+   height: 2px;
+   background-color: aqua;
+   place-self: center;
+}
+
 @keyframes r2 {
    0% {}
    30% {border-radius: 72% 28% 50% 50% / 66% 33% 67% 34% ;}
@@ -255,5 +344,34 @@ body {
       transform: scale(1.0);
    }
 
+}
+
+@keyframes round {
+   50% {
+      transform: rotate(180deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+
+@keyframes round2 {
+   50% {
+      transform: rotate(180deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+
+@keyframes round3 {
+   50% {
+      transform: rotate(180deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
 }
 
