@@ -2,6 +2,7 @@
    --neon: hsla(79, 100%, 61%, 1);
 }
 
+
 body {
    padding: 0%;
    margin: 0%;
@@ -430,3 +431,72 @@ body {
    }
 }
 
+
+/* 7th Animation onwards we DIVIDE */
+
+.part7 {
+   background-color: red;
+   position: relative;
+   overflow-x: hidden;
+   overflow-y: hidden;
+   height: 100vh;
+   margin: 0;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.btn {
+   width: 60vw;
+   height: 20vh;
+   /* background-color: var(--neon); */
+   text-align: center;
+   font-size: x-large;
+   font-weight: 800;
+   position: relative;
+   outline: none;
+   border: none;
+
+   --border-size: 2px;
+   --background-color: #2e3344;
+}
+
+
+
+.btn.bgSlide::before {
+   content: '';
+   position: absolute;  
+   /* We position peudo element within our button */
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: -1;
+   background-color: var(--background-color);
+
+   transform: scaleX(0);
+   transition: transform 1000ms ease-in-out;
+   transform-origin: left;
+}
+
+.btn.bgSlide:hover::before {
+   transform: scaleX(1);
+}
+
+.btn.bgSlide {
+   z-index: 1;
+   transition: color 500ms ease-in;
+}
+.btn.bgSlide:hover {
+   color: antiquewhite;
+
+}
+
+/* .btn.bgSlide:hover::before {
+   top: calc(--border-size) * -2;
+   top: calc(--border-size) * -2;
+   top: calc(--border-size) * -2;
+   top: calc(--border-size) * -2;
+} */
