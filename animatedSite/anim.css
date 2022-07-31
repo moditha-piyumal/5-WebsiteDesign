@@ -464,7 +464,7 @@ body {
 }
 
 
-
+/*  Below this comment is the background color sliding hover animation. There is a line of xxxx 's to denote the end of it later. */
 .btn.bgSlide::before {
    content: '';
    position: absolute;  
@@ -493,10 +493,45 @@ body {
    color: antiquewhite;
 
 }
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
-/* .btn.bgSlide:hover::before {
-   top: calc(--border-size) * -2;
-   top: calc(--border-size) * -2;
-   top: calc(--border-size) * -2;
-   top: calc(--border-size) * -2;
-} */
+
+.btn.bgCircle::before {
+   content: '';
+   position: absolute;  
+   /* We position peudo element within our button */
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: -1;
+   background-color: var(--neon, blue);
+   border-radius: 50%;
+   transition: transform 1000ms ease-out;
+   /* color: aqua; */
+   /* transition: color 1000ms ease-in-out; */
+
+   transform: scale(1.5);
+   
+
+}
+
+.btn.bgCircle:hover::before {
+   transform: scale(0);
+   /* color: coral; */
+   
+}
+.btn.bgCircle:hover {
+   color: antiquewhite;
+}
+
+
+.btn.bgCircle {
+   z-index: 1;
+   /* transition: color 500ms ease-in; */
+   overflow: hidden;
+   background-color: var(--background-color);
+   color: red;
+   transition: color 1000ms ease-in-out;
+   
+}
