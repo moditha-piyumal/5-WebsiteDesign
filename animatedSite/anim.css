@@ -535,3 +535,52 @@ body {
    transition: color 1000ms ease-in-out;
    
 }
+
+/* This is part 8 and thgis is inspired by the breathing app. */
+
+.part8 {
+   background-color: olive;
+   position: relative;
+   overflow-x: hidden;
+   overflow-y: hidden;
+   height: 100vh;
+   margin: 0;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+
+}
+
+#expander {
+   background-color: aliceblue;
+   height: 100px;
+   width: 100px;
+   border: solid 2px blue;
+   border-radius: 50%;
+}
+
+.normalScale {
+   scale: 1;
+}
+
+.upScale {
+   animation: ScaleUp 2s linear forwards;
+}
+
+.downScale {
+   animation: ScaleDown 2s linear forwards;
+}
+
+@keyframes ScaleUp {
+   from {transform: scale(1);}
+
+   to {transform: scale(2);}
+
+}
+
+@keyframes ScaleDown {
+   from {transform: scale(2);}
+
+   to {transform: scale(1);}
+}

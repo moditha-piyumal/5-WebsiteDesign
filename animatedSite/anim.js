@@ -37,3 +37,21 @@ function load() {
 }
 
 load();
+
+
+// The breathing app animation
+
+var expander = document.querySelector('#expander');
+
+scaler()
+
+function scaler() {
+   expander.className ='upScale'
+   setTimeout(() => {
+      expander.className ='downScale'
+   }, 2000)
+   
+}
+
+
+setInterval(scaler, 4000);
