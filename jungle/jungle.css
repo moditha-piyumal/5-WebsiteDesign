@@ -1,0 +1,403 @@
+body {
+   margin: 0;
+   padding: 0;
+   background-color: coral;
+}
+
+.container {
+
+   position: relative;
+   left: 90px;
+
+   width: 1500px;
+   height: 900px;
+   background-color: darkslategrey;
+}
+
+
+
+
+
+
+/* Sky stuff comes here. All animations as well. */
+.sky {
+   width: 1500px;
+   height: 500px;
+   background-color: aquamarine;
+   position: relative;
+}
+
+/* One tree group starts here. */
+
+.trees {
+   /* scale: 1; */
+   position: absolute;
+   bottom: 0;
+   z-index: 1;
+}
+
+
+/* These are 1tree image trees */
+
+.trees1 {
+   left: 200px;
+   height: 400px;
+}
+.trees2 {
+   left: 300px;
+   height: 420px;
+}
+.trees3 {
+   left: 600px;
+   height: 450px;
+}
+.trees4 {
+   left: 900px;
+   height: 350px;
+}
+.trees5 {
+   left: 1000px;
+   height: 390px;
+}
+
+/* These are 2tree image trees. */
+
+
+.treesB1 {
+   left: 100px;
+   height: 400px;
+}
+.treesB2 {
+   left: 400px;
+   height: 470px;
+}
+.treesB3 {
+   left: 700px;
+   height: 450px;
+}
+.treesB4 {
+   left: 490px;
+   height: 390px;
+}
+.treesB5 {
+   left: 1000px;
+   height: 300px;
+}
+
+/* This is the animation for the bigger group of trees */
+.trees1Anim {
+   animation: treesInWind 4s ease-in-out forwards infinite;
+}
+@keyframes treesInWind {
+   0% {rotate: 0deg; transform-origin: bottom right;}
+   40% {rotate: 5deg;}
+   60% {rotate: 5deg;}
+   100% {rotate: 0deg;}
+}
+
+/* The second trees group starts here. */
+
+.otherTrees {
+   position: absolute;
+   bottom: 0;
+   z-index: 1;
+}
+
+/* These are 3tree image trees */
+
+
+.otherTreesA1 {
+   left: 0px;
+   height: 400px;
+}
+.otherTreesA2 {
+   left: -30px;
+   height: 200px;
+}
+.otherTreesA3 {
+   left: 1300px;
+   height: 200px;
+}
+
+/* These are 4tree image trees */
+
+.otherTreesB1 {
+   left: 100px;
+   height: 370px;
+}
+.otherTreesB2 {
+   left: 400px;
+   height: 370px;
+}
+.otherTreesB3 {
+   left: 800px;
+   height: 330px;
+}
+
+/* These are the 5tree image trees */
+
+.otherTreesC1 {
+   left: 1200px;
+   height: 330px;
+}
+
+/* This is the animation for the smaller group of trees */
+
+.trees2Anim {
+   animation: treesInWind2 4s linear forwards infinite;
+}
+@keyframes treesInWind2 {
+   0% {rotate: 0deg; transform-origin: bottom right;}
+   45% {rotate: 6deg;}
+   70% {rotate: 9deg;}
+   100% {rotate: 0deg;}
+}
+
+
+
+/* The grass is designed here. */
+
+.grass {
+
+   position: absolute;
+   /* left: 0; */
+   bottom: -10px;
+   height: 100px;
+   z-index: 2;
+}
+.grass1 {
+   left: 0px;
+}
+.grass2 {
+   left: 200px;
+}
+.grass3 {
+   left: 400px;
+}
+.grass4 {
+   left: 600px;
+}
+.grass5 {
+   left: 800px;
+}
+.grass6 {
+   left: 1000px;
+}
+.grass7 {
+   left: 1200px;
+}
+.grass8 {
+   left: 1300px;
+}
+
+/* The sun comes here. Sun is the best. */
+
+.sun {
+   position: absolute;
+   right: -250px;
+   bottom: -200px;
+   height: 200px;
+   animation: sunRise 30s linear forwards infinite 2s;
+   z-index: 0;
+}
+@keyframes sunRise {
+   0% {transform: translateX(0px); transform: translateY(0px);}
+   50% {transform: translateX(-800px) translateY(-700px)}
+   100% {transform: translateX(-1500px) translateY(-2000px)}
+}
+
+
+/* The monkey heads go here. The first two are animated in one way, and the other two are animated in another way. */
+.monkeyH {
+   position: absolute;
+   height: 50px;
+   z-index: 3;
+   
+}
+.mh1 {
+   bottom: 120px;
+   left: 200px;
+   opacity: 0;
+   animation: monkeyHeadAnim 4s linear forwards infinite 4s;
+}
+.mh2 {
+   bottom: 130px;
+   left: 900px;
+   opacity: 0;
+   animation: monkeyHeadAnim 4s linear forwards infinite 4s;
+}
+@keyframes monkeyHeadAnim {
+   0% {opacity: 0; transform: translateX(0px);}
+   3% {opacity: 1; transform: translateX(2px);}
+   80% {opacity: 1; transform: translateX(15px);}
+   83% {opacity: 0; transform: translateX(10px);}
+   100% {opacity: 0; transform: translateX(0px);}
+}
+/* Other monkey Heads */
+
+.monkeyH2 {
+   position: absolute;
+   height: 70px;
+   opacity: 0;
+   animation: monkeyHead2Anim 10s linear forwards infinite alternate;
+   z-index: 3;
+}
+@keyframes monkeyHead2Anim {
+   0% {opacity: 0; transform: rotate(0deg);}
+   20% {opacity: 0; transform: rotate(0deg);}
+   22% {opacity: 1; transform: rotate(0deg);}
+   50% {opacity: 1; transform: rotate(50deg);}
+   70% {opacity: 1; transform: rotate(-50deg);}
+   80% {opacity: 1; transform: rotate(0deg);}
+   82% {opacity: 0; transform: rotate(0deg);}
+   100% {opacity: 0; transform: rotate(0deg);}
+}
+.mh3 {
+   /* position: absolute; */
+   left: 500px;
+   top: 90px;
+}
+.mh4 {
+   /* position: absolute; */
+   left: 1100px;
+   bottom: 20px;
+}
+
+/* Jumping Monkey Baby comes here. */
+
+.monkey {
+   position: absolute;
+   height: 120px;
+   left: 0px;
+   bottom: 0px;
+   animation: jumpMonkey 10s linear forwards infinite;
+   animation-direction: alternate;
+   
+}
+@keyframes jumpMonkey {
+   0% {rotate: 0deg;}
+   6% {rotate: 90deg;}
+   12% {rotate: 180deg;}
+   19% {rotate: 270deg;}
+   25% {rotate: 360deg;}
+   31% {rotate: 450deg;}
+   37% {rotate: 540deg;}
+   44% {rotate: 630deg;}
+   50% {rotate: 720deg;}
+   56% {rotate: 810deg;}
+   62% {rotate: 900deg;}
+   69% {rotate: 990deg;}
+   75% {rotate: 1080deg;}
+   81% {rotate: 1170deg;}
+   87% {rotate: 1260deg;}
+   94% {rotate: 1350deg;}
+   100% {rotate: 1440deg;}
+}
+.monkeyDiv {
+   height: 120;
+   width: auto;
+   position: absolute;
+   left: 100px;
+   bottom: 0px;
+   animation: jumpMonkey2 10s linear forwards infinite;
+   animation-direction: alternate;
+   z-index: 4;
+}
+@keyframes jumpMonkey2 {
+   0% {transform: translate(0px, 0px);}
+   6% {transform: translate(70px, -100px);}
+   12% {transform: translate(130px, -150px);}
+   19% {transform: translate(200px, -100px);}
+   25% {transform: translate(275px, 0px);}
+   31% {transform: translate(350px, -100px);}
+   37% {transform: translate(435px, -150px);}
+   44% {transform: translate(490px, -100px);}
+   50% {transform: translate(550px, 0px);}
+   56% {transform: translate(625px, -100px);}
+   62% {transform: translate(700px, -150px);}
+   69% {transform: translate(770px, -100px);}
+   75% {transform: translate(850px, 0px);}
+   81% {transform: translate(920px, -100px);}
+   87% {transform: translate(980px, -150px);}
+   94% {transform: translate(1060px, -100px);}
+   100% {transform: translate(1100px, 0px);} 
+}
+
+
+.birdy {
+   height: 50px;
+   position: absolute;
+   right: -100px;
+   top: 100px;
+   z-index: 5;
+   animation: birdfly 30s ease-in forwards infinite 6s;
+}
+
+@keyframes birdfly {
+   0% {transform: translateX(0px);}
+   100% {transform: translateX(-7700px);}
+}
+.birdy2 {
+   height: 50px;
+   position: absolute;
+   right: -110px;
+   top: 120px;
+   z-index: 5;
+   animation: birdfly2 30s ease-in forwards infinite 4s;
+}
+
+@keyframes birdfly2 {
+   0% {transform: translateX(0px);}
+   100% {transform: translateX(-6700px);}
+}
+
+/* Below this we have the parts that are within the land area. There maybe certain overlaps. But, we are containing the items within the sky div and land div as much as possible. */
+
+
+
+.land {
+   width: 1500px;
+   height: 400px;
+   background-color: darkgreen;
+}
+
+
+.flower {
+   position: absolute;
+   height: 200px;
+   bottom: 30px;
+   left: 20px;
+}
+
+
+.jumbo {
+   /* position: absolute; */
+   height: 300px;
+   /* bottom: 0px; */
+   /* right: -500px; */
+   animation: jumboMove 0.5s linear both infinite ;
+   
+}
+
+@keyframes jumboMove {
+   0% {rotate: 0deg;}
+   40% {rotate: 3deg;}
+   100% {rotate: 0deg;}
+}
+
+.jumboGo {
+   position: absolute;
+   height: 300px;
+   bottom: 0px;
+   right: -500px;
+   animation: jumboGo 30s ease-in-out forwards infinite;
+}
+
+@keyframes jumboGo {
+   0% {transform: translateX(0px);}
+   30% {transform: translateX(-500px);}
+   40% {transform: translateX(-1300px);}
+   50% {transform: translateX(-2000px);}
+   70% {transform: translateX(-2300px);}
+   100% {transform: translateX(-2300px);}
+}
