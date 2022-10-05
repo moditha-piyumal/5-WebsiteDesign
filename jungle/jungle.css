@@ -12,6 +12,8 @@ body {
    width: 1500px;
    height: 900px;
    background-color: darkslategrey;
+
+   overflow: hidden;
 }
 
 
@@ -23,8 +25,17 @@ body {
 .sky {
    width: 1500px;
    height: 500px;
-   background-color: aquamarine;
+   background-color: black;
    position: relative;
+   animation: skyColor 30s linear forwards infinite;
+}
+@keyframes skyColor {
+   0% {background-color: black;}
+   20% {background-color: aquamarine;}
+   50% {background-color: aquamarine;}
+   70% {background-color: lightblue;}
+   80% {background-color: black;}
+   100% {background-color: black;}
 }
 
 /* One tree group starts here. */
@@ -197,7 +208,7 @@ body {
    right: -250px;
    bottom: -200px;
    height: 200px;
-   animation: sunRise 30s linear forwards infinite 2s;
+   animation: sunRise 30s linear forwards infinite;
    z-index: 0;
 }
 @keyframes sunRise {
@@ -343,12 +354,68 @@ body {
    right: -110px;
    top: 120px;
    z-index: 5;
-   animation: birdfly2 30s ease-in forwards infinite 4s;
+   animation: birdfly2 30s ease-in-out forwards infinite 4s;
 }
 
 @keyframes birdfly2 {
    0% {transform: translateX(0px);}
+   /* 20% {transform: translateX(-500px);} */
+   24% {transform: translateX(-680px);}
    100% {transform: translateX(-6700px);}
+}
+
+.star1 {
+   height: 100px;
+   position: absolute;
+   right: -500px;
+   bottom: -500px;
+   z-index: 0;
+   animation: starRise1 30s linear forwards infinite 10s;
+}
+@keyframes starRise1 {
+   0% {transform: translateX(0px); transform: translateY(0px);}
+   50% {transform: translateX(-800px) translateY(-700px)}
+   100% {transform: translateX(-1500px) translateY(-1800px)}
+}
+.star2 {
+   height: 60px;
+   position: absolute;
+   right: -600px;
+   bottom: -600px;
+   z-index: 0;
+   animation: starRise2 30s linear forwards infinite 10s;
+}
+@keyframes starRise2 {
+   0% {transform: translateX(0px); transform: translateY(0px);}
+   50% {transform: translateX(-800px) translateY(-700px)}
+   100% {transform: translateX(-1500px) translateY(-1800px)}
+}
+.star3 {
+   height: 90px;
+   position: absolute;
+   right: -500px;
+   bottom: -800px;
+   z-index: 0;
+   animation: starRise3 30s linear forwards infinite 10s;
+}
+@keyframes starRise3 {
+   0% {transform: translateX(0px); transform: translateY(0px);}
+   50% {transform: translateX(-800px) translateY(-700px)}
+   100% {transform: translateX(-1500px) translateY(-1800px)}
+}
+.star4 {
+   height: 40px;
+   position: absolute;
+   right: -200px;
+   bottom: -500px;
+   z-index: 0;
+   animation: starRise4 30s linear forwards infinite 10s;
+}
+@keyframes starRise4 {
+   0% {transform: translateX(0px); transform: translateY(0px);}
+   50% {transform: translateX(-800px) translateY(-700px)}
+   95% {transform: translateX(-1500px) translateY(-1800px)}
+   100% {transform: translateX(-1500px) translateY(-1800px)}
 }
 
 /* Below this we have the parts that are within the land area. There maybe certain overlaps. But, we are containing the items within the sky div and land div as much as possible. */
@@ -359,6 +426,7 @@ body {
    width: 1500px;
    height: 400px;
    background-color: darkgreen;
+   position: relative;
 }
 
 
@@ -390,14 +458,154 @@ body {
    height: 300px;
    bottom: 0px;
    right: -500px;
+   z-index: 4;
    animation: jumboGo 30s ease-in-out forwards infinite;
 }
 
 @keyframes jumboGo {
    0% {transform: translateX(0px);}
-   30% {transform: translateX(-500px);}
+   30% {transform: translateX(-800px);}
    40% {transform: translateX(-1300px);}
    50% {transform: translateX(-2000px);}
    70% {transform: translateX(-2300px);}
    100% {transform: translateX(-2300px);}
+}
+
+.peacockGo {
+   position: absolute;
+   top: -50px;
+   left: 700px;
+   z-index: 3;
+   /* animation: movingP 10s linear forwards infinite; */
+}
+
+@keyframes movingP {
+   0% {opacity: 0;}
+   25% {opacity: 0;}
+   /* Movement here */
+   27% {opacity: 1; transform: scale(1);}
+   40% {opacity: 1; transform: scale(4) translateY(60px);}
+   42% {opacity: 1; transform: scale(4) rotate(5deg) translateY(60px);}
+   45% {opacity: 1; transform: scale(4) rotate(-5deg) translateY(60px);}
+   48% {opacity: 1; transform: scale(4) rotate(0deg) translateY(60px);}
+   50% {opacity: 1; transform: scale(4) translateY(60px);}
+   68% {opacity: 1; transform: scale(1);}
+   /* Movement here */
+   70% {opacity: 0;}
+   100% {opacity: 0;}
+}
+
+.peacock {
+   height: 50px;
+   opacity: 0;
+   animation: movingP 30s linear forwards infinite;
+}
+
+.tarzan {
+   position: absolute;
+   height: 140px;
+   left: -400px;
+   top: 15px;
+   animation: tarzanGo 30s ease-in forwards infinite;
+}
+
+@keyframes tarzanGo {
+   0% {transform: translateX(0px);}
+   10% {transform: translateX(300px) translateY(105px);}
+   12% {transform: translateX(370px) translateY(85px);}
+   13% {transform: translateX(420px);}
+   15% {transform: translateX(490px);}
+   18% {transform: translateX(600px);}
+   20% {transform: translateX(740px);}
+   22% {transform: translateX(880px) ;}
+   24% {transform: translateX(1000px);}
+   27% {transform: translateX(1130px);}
+   29% {transform: translateX(1190px);}
+   36% {transform: translateX(1270px);}
+   38% {transform: translateX(1330px);}
+   43% {transform: translateX(1420px);}
+   47% {transform: translateX(1500px);}
+   53% {transform: translateX(1670px);}
+   60% {transform: translateX(1800px) translateY(135px);}
+   66% {transform: translateX(1830px) translateY(135px);}
+   70% {transform: translateX(1980px);}
+   100% {transform: translateX(1980px);}
+}
+
+.tiger {
+   position: absolute;
+   height: 87px;
+   top: -82px;
+   right: -100px;
+   z-index: 1;
+   animation: tigermove 30s linear forwards infinite;
+}
+
+@keyframes tigermove {
+   0% {transform: translateX(-0px);}
+   20% {transform: translateX(-520px) translateY(0px)}
+   24% {transform: translateX(-530px) translateY(-80px)}
+   27% {transform: translateX(-530px) translateY(0px)}
+   30% {transform: translateX(-700px);}
+   40% {transform: translateX(-1000px);}
+   60% {transform: translateX(-1300px) translateY(-0px);}
+   62% {transform: translateX(-1350px) translateY(-18px);}
+   64% {transform: translateX(-1370px) translateY(0px);}
+   70% {transform: translateX(-1800px);}
+   90% {transform: translateX(-2000px);}
+   100% {transform: translateX(-2200px);}
+}
+
+
+.leaf {
+   position: absolute;
+   left: -100px;
+   width: 50px;
+   top: 100px;
+}
+.leaf2 {
+   position: absolute;
+   left: -200px;
+   width: 60px;
+   top: 10px;
+}
+.leaf3 {
+   position: absolute;
+   left: -300px;
+   width: 50px;
+   top: -100px;
+   z-index: 3;
+}
+.leaf4 {
+   position: absolute;
+   left: -300px;
+   width: 60px;
+   bottom: 350px;
+   z-index: 3;
+}
+.leaf5 {
+   position: absolute;
+   left: -70px;
+   width: 70px;
+   top: -500px;
+   z-index: 3;
+}
+
+.leafGo {
+   animation: leafGoA 9s linear forwards infinite;
+}
+@keyframes leafGoA {
+   0% {transform: translateX(0px);}
+   /* 10% {transform: translateX(200px);} */
+   /* 20% {transform: translateX(500px);} */
+   100% {transform: translateX(2300px) rotate(720deg);}
+}
+.leafGoB {
+   animation: leafGoB 7s linear forwards infinite;
+}
+@keyframes leafGoB {
+   0% {transform: translateX(0px);}
+   /* 10% {transform: translateX(200px);} */
+   /* 20% {transform: translateX(500px);} */
+   100% {transform: translateX(2500px) rotate(790deg);}
 }
